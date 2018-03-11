@@ -2,7 +2,7 @@ body {
   /*font-family: "futura-pt, arial, sans-serif;;*/
   font-size: 13px;
   line-height: 20px;
-  font-family: Avenir;
+  font-family: "soleil",sans-serif;
   -ms-font-feature-settings: "liga","dlig";
   font-feature-settings: "liga","dlig";
   -webkit-font-smoothing: antialiased;
@@ -89,11 +89,8 @@ tbody :hover {
   font-size: 2.6rem;
   font-weight: 400;
   line-height: 3.2rem;
-  /*font-weight:700;*/
-  /*color:#fff;*/
+  font-family: "soleil",sans-serif;
   color: #5259D2;
-  /*text-align: center;*/
- /*padding-left:4em; */
 }
 #img-hero {
     /*margin: 4rem;*/
