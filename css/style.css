@@ -37,9 +37,12 @@ table {
 /*   padding: 2em; */
   max-width: 80vw;
 }
+.center {
+  text-align: center !important;
+}
 #logo {
   max-height: -webkit-fill-available;
-  padding: 0.4em;
+  padding: 0.2em;
 }
 .alldetails {
 padding:20px;
@@ -118,10 +121,10 @@ button {
 margin-bottom: 1em !important;
 }
 .site-title a {
-    color: #222;
-    font-family: "Open Sans", arial, sans-serif;
-    font-size: 20px;
-    text-decoration: none;
+  color: #222;
+  /*font-family: "Open Sans", arial, sans-serif;*/
+  font-size: 20px;
+  text-decoration: none;
   line-height:2.75;
 }
 .header {
@@ -204,6 +207,8 @@ a.post-button-link:visited {
 .modal-container .modal-body {
   max-height:95vh !important;
   min-height: 60vh !important;
+  /* full-width*/
+  padding: 0 !important;
 }
 .close {
   text-align:center;
