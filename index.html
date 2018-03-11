@@ -180,59 +180,69 @@
 </table> 
 </div><!-- /end content container -->
 
-<!-- SCRIPTS -->
-<script src="http://load.sheetsu.com"></script>
+      <!-- SCRIPTS -->
+      <script src="http://load.sheetsu.com"></script>
 
-<script type="text/javascript">
-  var myFunc = debounce(function () {
-    countryValue = contryValue();
-    addSearchValue({ Country: "*" + countryValue + "*" });
-    resetTableBody();
-    triggerNewSearch();
+      <script type="text/javascript">
+        var myFunc = debounce(function () {
+          countryValue = contryValue();
+          addSearchValue({ Country: "*" + countryValue + "*" });
+          resetTableBody();
+          triggerNewSearch();
 
-  }, 400);
+        }, 400);
 
 
-  function contryValue() {
-    return document.getElementById("country").value;
-  }
+        function contryValue() {
+          return document.getElementById("country").value;
+        }
 
-  function tableElement() {
-    return document.querySelector("tbody[sheetsu]");
-  }
+        function tableElement() {
+          return document.querySelector("tbody[sheetsu]");
+        }
 
-  function resetTableBody() {
-    document.querySelector("tbody[sheetsu]").innerHTML = tableRow();
-  }
+        function resetTableBody() {
+          document.querySelector("tbody[sheetsu]").innerHTML = tableRow();
+        }
 
-  function addSearchValue(searchValue) {
-    tableElement().setAttribute("sheetsu-search", JSON.stringify(searchValue));
-  }
+        function addSearchValue(searchValue) {
+          tableElement().setAttribute("sheetsu-search", JSON.stringify(searchValue));
+        }
 
-  function triggerNewSearch() {
-    var element = document.querySelector("tbody[sheetsu]");
-    (new ChangeGetElement(element)).call();
-  }
+        function triggerNewSearch() {
+          var element = document.querySelector("tbody[sheetsu]");
+          (new ChangeGetElement(element)).call();
+        }
 
-  function tableRow() {
-    return '<tr><td><a href="mailto:{{Email}}">{{Name}}</a></td><td>{{country}}</td><td>{{IssueArea}}</td><td>{{Affiliation}}</td><td><a href={{TwitterURL}}>{{TwitterHandle}}</a></td></tr>';
-  }
+        function tableRow() {
+          return '<tr><td><a href="mailto:{{Email}}">{{Name}}</a></td><td>{{country}}</td><td>{{IssueArea}}</td><td>{{Affiliation}}</td><td><a href={{TwitterURL}}>{{TwitterHandle}}</a></td></tr>';
+        }
 
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
+        function debounce(func, wait, immediate) {
+          var timeout;
+          return function() {
+            var context = this, args = arguments;
+            var later = function() {
+              timeout = null;
+              if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+          };
+        };
+      </script>
 
-</script>
+      <!-- Google Analytics  -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47124009-3"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-47124009-3');
+      </script>
 </body>
 </html>
