@@ -155,11 +155,13 @@
   <tbody sheetsu="https://sheetsu.com/apis/v1.0/e3589d470ecc" sheetsu-limit="150" sheetsu-ignore-case="true">
     <tr id="jobs">
       <a href={{jobs_url}} target="_blank">
+        <!-- Logo -->
         <div class="">
           <td class="col-2" id="logotd">
             <img id="companylogo" src="{{company_logo}}">  
           </td>
         </div>
+        <!-- Details -->
         <div class="">
           <td class="alldetails col-8">
             <a class="companyname" href={{jobs_url}} target="_blank">{{company_name}}</a>
@@ -172,18 +174,26 @@
             </p>
           </td>
         </div>
-        <td>
-          <div class="col-2">
-            <a href={{jobs_url}}><button class="btn" id="view-details">View details</button></a>
-          </div>
-        </td>
-      </a> <!-- make entire row a link -->
+        <!-- Link -->
+        <div class="">
+          <td>
+            <div class="col-2">
+              <a href={{jobs_url}} target="_blank"><button class="btn" id="view-details">View details</button></a>
+            </div>
+          </td>
+        <div class="">
+      </a> <!-- Make entire row link -->
     </tr>
 
   </tbody>
 </table> 
 </div><!-- /end content container -->
 
+<footer>
+  <div class="container pad-lg">
+    <p class="center copyright">Designed and built with <span class="text-error">♥</span> by <a href="http://www.ericpuigmarti.com/" target="_blank">Eric Puigmarti</a><br>Powered by <a href="https://sheetsu.com/" target="_blank">Sheetsu</a></p>
+  </div>  
+</footer>
       <!-- SCRIPTS -->
       <script src="http://load.sheetsu.com"></script>
 

@@ -40,6 +40,22 @@ table {
 .center {
   text-align: center !important;
 }
+.pad-sm {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.pad-md {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.pad-lg {
+    padding-top: 8em !important;
+    padding-bottom: 2em !important;
+}
 #logo {
   max-height: -webkit-fill-available;
   padding: 0.2em;
