@@ -214,6 +214,9 @@ a.post-button-link:visited {
   text-align:center;
   width: 100%;
 }
+.form-content {
+  padding: 0.8rem;
+}
 .form-city, .form-country {
   width: 50%;
   float: left;
@@ -221,6 +224,9 @@ a.post-button-link:visited {
 .form-country {
   clear: right;
   padding-left: 5%;
+}
+.required {
+  color: red;
 }
 #view-details {
 /*   color:red; */
