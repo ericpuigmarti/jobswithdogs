@@ -250,3 +250,7 @@ a.post-button-link:visited {
 #toggle {
   margin-right: 4em;
 }
+footer {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
