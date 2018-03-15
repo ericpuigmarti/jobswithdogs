@@ -31,12 +31,6 @@ th {
 /*   display:none; */
   text-align:left;
 }
-table {
-  background-color:#ffffff;
-  margin: 0 auto;
-/*   padding: 2em; */
-  max-width: 80vw;
-}
 .center {
   text-align: center !important;
 }
@@ -60,12 +54,12 @@ table {
   max-height: -webkit-fill-available;
   padding: 0.2em;
 }
-.alldetails {
+#all-details {
 padding:20px;
 }
 #companylogo {
-/*  max-width: 130px;*/
-  max-width: 8em;
+  max-width: 80%;
+  /*max-width: 8em;*/
   padding: 10px 20px;
 }
 #logotd {
@@ -90,7 +84,18 @@ padding:20px;
   margin-right: 1em;
 }
 tbody :hover {
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
+}
+td {
+  display:inline-block;
+}
+.table td, .table th {
+  border-bottom: none !important; 
+  /*padding: 0 !important;*/
+}
+
+.table tr {
+  border-bottom: .05rem solid #e7e9ed;
 }
 #intro {
     padding-top: 8em;
@@ -190,15 +195,12 @@ a.post-button-link:visited {
   color: #ffffff !important;
 }
 .content-container {
-    margin: auto;
-/*     max-width: 960px; */
-/*     width: 100%; */
-    padding: 2rem;
-    /*min-height: 560px;*/
-    background: #ffffff;
-    border: #eee solid 1px;
-    box-shadow: 0 30px 40px 0 rgba(0,0,0,0.08);
-    z-index: 100;
+  margin: auto;
+  padding: 1rem;
+  background: #ffffff;
+  border: #eee solid 1px;
+  box-shadow: 0 30px 40px 0 rgba(0,0,0,0.08);
+  z-index: 100;
 }
 .view-details {
   min-width: 120px;
@@ -252,4 +254,70 @@ a.post-button-link:visited {
 }
 footer {
   padding: 4em !important;
+}
+#twitter-widget-0{
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    #link {
+      display: none;
+    }
+/*    #companylogo{
+      padding: 0 !important;
+      max-width: 100%;
+    }*/
+}
+@media only screen and (max-width: 768px) {
+    body {
+        /*background-color: lightblue !important;*/
+    }
+    body:before {
+      left: calc(40% - 30px);
+    }
+    #intro {
+      padding-top: 6em;
+      padding-bottom: 2em;
+    }
+    .content-container {
+      padding: 1em;
+    }
+    #link {
+      display: none;
+    }
+    #companylogo{
+      padding: 0.25em;
+      max-width: 100%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    #site-desc {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+    #link {
+      display: none;
+    }
+    /*.intro-container {
+      max-height: 60vh;
+    }*/
+/*    #intro {
+      padding-top: 6em;
+      padding-bottom: 3em;
+    }*/
+    body:before {
+      left: 0;
+    }
+    .logo img{
+      max-width: 45vw;
+      margin-top: 0.75em;
+      padding: 0 !important;
+    }
+    #logotd img {
+      max-width: 50%;
+      margin-top: 1em;
+      /*margin: 1em;*/
+      left: 20%;
+      position: relative;
+    }
 }

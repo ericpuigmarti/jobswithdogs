@@ -62,11 +62,12 @@
     <div class="header-container">
     <!-- ".logo" -->
       <div class="logo">
-        <a href="/"><img id="logo" src="logo/logo-transparent.png"></a>
+        <a href="/"><img id="logo" src="logo/logo-goofy.png"></a>
+        <!-- <a href="/"><img id="logo" src="logo/logo-transparent.png"></a> -->
         <span class="site-title" style="display: none;"><a href="/">jobs.with.dogs</a></span>
       </div>
       <!-- Form -->
-       <div class="column col-3 col-xs-12 post">
+       <div class="column col-3 col-xs-6 post">
             <a href="#example-modal-2" class="btn btn-primary right">Submit a Listing</a>
             <div class="modal modal-sm" id="example-modal-2">
               <a href="#modals-sizes" class="modal-overlay" aria-label="Close"></a>
@@ -123,16 +124,16 @@
 </header>
 
 <div class="intro-container hero col-md-12">
-    <div class="col-7 col-sm-10" id="intro"><h1 id="site-desc" class="center">Discover the best dog-friendly tech companies <!-- 🐶 --></h1></div>
+    <div class="col-7 col-sm-11" id="intro"><h1 id="site-desc" class="center">Discover the best dog-friendly tech companies <!-- 🐶 --></h1></div>
     <!-- <p>If you’re among the <a href="http://www.americanpetproducts.org/press_industrytrends.asp" target="_blank">68% of U.S. households</a> that include a pet, you likely know the joy of unconditional love. On the flipside, you know how miserable it can be to go to work each day and leave your best buddy behind.</p>  -->
     <!-- Dog image -->
 <!--    <div class="hero-container"><img id="img-hero" src=""> </div> -->
   </div>
 
 <!-- <input type="text" id="country" placeholder="Country" value="" onkeydown="myFunc()"> -->
-<div class="content-container col-8 col-sm-10 filter">
-  <input class="col-5 col-sm-12 form-input" style="display: inline;" type="text" class="" id="" placeholder="Search by industry or keyword" value="" data-test="jobs-search-input">
-  <select class="col-3 col-sm-12 form-select" style="vertical-align: baseline !important;" name="locations" sheetsu="https://sheetsu.com/apis/v1.0/e3589d470ecc/sheets/cities" sheetsu-limit="20" sheetsu-ignore-case="true">
+<div class="content-container col-8 col-md-10 col-sm-10 filter">
+  <input class="col-5 col-md-12 col-sm-12 form-input" style="display: inline;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by industry or keyword" value="" data-test="jobs-search-input">
+  <select class="col-3 col-md-12 col-sm-12 form-select" style="vertical-align: baseline !important;" name="locations" sheetsu="https://sheetsu.com/apis/v1.0/e3589d470ecc/sheets/cities" sheetsu-limit="20" sheetsu-ignore-case="true">
     <!-- <option value="all">Locations</option> -->
     <option value="city" placeholder="Locations" >{{city_select}}</option>
   </select>
@@ -142,8 +143,8 @@
   </select> -->
 </div>
 
-<div class="content-container col-8 col-sm-10">
-<table width="100%"" border="0">
+<div class="content-container col-8 col-md-10 col-sm-10 col-xs-12">
+<table id="myTable" class="table table-hover" width="100%"" border="0">
 <!-- Table Header   -->
 <!--   <thead>
     <th>Logo</th>
@@ -157,13 +158,13 @@
       <a href={{jobs_url}} target="_blank">
         <!-- Logo -->
         <div class="">
-          <td class="col-2" id="logotd">
-            <img id="companylogo" src="{{company_logo}}">  
+          <td class="col-3 col-sm-12" id="logotd">
+            <a class="" href={{jobs_url}} target="_blank"><img id="companylogo" src="{{company_logo}}"></a>  
           </td>
         </div>
         <!-- Details -->
         <div class="">
-          <td class="alldetails col-8">
+          <td class="col-7 col-sm-12" id="all-details">
             <a class="companyname" href={{jobs_url}} target="_blank">{{company_name}}</a>
             <br>
             <p class="companydesc">{{mission}}</p>
@@ -177,7 +178,7 @@
         <!-- Link -->
         <div class="">
           <td>
-            <div class="col-2">
+            <div class="col-2 col-sm-12" id="link">
               <a href={{jobs_url}} target="_blank"><button class="btn" id="view-details">View details</button></a>
             </div>
           </td>
@@ -190,7 +191,11 @@
 
 <footer>
   <div class="container">
-    <p class="center copyright">Designed and built with <span class="text-error">♥</span> by <a href="http://www.ericpuigmarti.com/" target="_blank">Eric Puigmarti</a><br>Powered by <a href="https://sheetsu.com/" target="_blank">Sheetsu</a></p>
+    <p class="center copyright">Designed and built with <span class="text-error">♥</span> by <a href="http://www.ericpuigmarti.com/" target="_blank">Eric Puigmarti</a><br>Powered by <a href="https://sheetsu.com/" target="_blank">Sheetsu</a> and <a href="https://picturepan2.github.io/spectre/" target="_blank">Spectre</a></p>
+    <!-- Twitter widger -->
+    <div id="twitter" class="centered">
+      <a href="https://twitter.com/jobs_with_dogs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-dnt="true" data-show-count="false">Follow @jobs_with_dogs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
   </div>  
 </footer>
       <!-- SCRIPTS -->
@@ -245,6 +250,31 @@
             if (callNow) func.apply(context, args);
           };
         };
+      </script>
+
+      <!-- Filter Search Results -->
+      <script type="text/javascript">
+        function searchTable() {
+          var input, filter, found, table, tr, td, i, j;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td");
+              for (j = 0; j < td.length; j++) {
+                  if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                      found = true;
+                  }
+              }
+              if (found) {
+                  tr[i].style.display = "";
+                  found = false;
+              } else {
+                  tr[i].style.display = "none";
+              }
+            }
+          }
       </script>
 
       <!-- Google Analytics  -->
