@@ -132,7 +132,8 @@
 
 <!-- <input type="text" id="country" placeholder="Country" value="" onkeydown="myFunc()"> -->
 <div class="content-container col-8 col-md-10 col-sm-10 filter">
-  <input class="col-5 col-md-12 col-sm-12 form-input" style="display: inline;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by industry or keyword" value="" data-test="jobs-search-input">
+  <input class="col-5 col-md-12 col-sm-12 form-input search"  style="display: inline;" type="text" id="search" placeholder="Search by industry or keyword" value="" data-test="jobs-search-input">
+  <!-- Dropdown -->
   <select class="col-3 col-md-12 col-sm-12 form-select" style="vertical-align: baseline !important;" name="locations" sheetsu="https://sheetsu.com/apis/v1.0/e3589d470ecc/sheets/cities" sheetsu-limit="20" sheetsu-ignore-case="true">
     <!-- <option value="all">Locations</option> -->
     <option value="city" placeholder="Locations" >{{city_select}}</option>
@@ -193,14 +194,13 @@
   <div class="container">
     <p class="center copyright">Designed and built with <span class="text-error">♥</span> by <a href="http://www.ericpuigmarti.com/" target="_blank">Eric Puigmarti</a><br>Powered by <a href="https://sheetsu.com/" target="_blank">Sheetsu</a> and <a href="https://picturepan2.github.io/spectre/" target="_blank">Spectre</a></p>
     <!-- Twitter widger -->
-    <div id="twitter" class="centered">
+    <div id="twitter" class="col-1 col-md-3 col-sm-6 centered">
       <a href="https://twitter.com/jobs_with_dogs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-dnt="true" data-show-count="false">Follow @jobs_with_dogs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>  
 </footer>
-      <!-- SCRIPTS -->
+      <!-- Sheetsu SCRIPTS -->
       <script src="http://load.sheetsu.com"></script>
-
       <script type="text/javascript">
         var myFunc = debounce(function () {
           countryValue = contryValue();
@@ -209,7 +209,6 @@
           triggerNewSearch();
 
         }, 400);
-
 
         function contryValue() {
           return document.getElementById("country").value;
@@ -254,27 +253,6 @@
 
       <!-- Filter Search Results -->
       <script type="text/javascript">
-        function searchTable() {
-          var input, filter, found, table, tr, td, i, j;
-          input = document.getElementById("myInput");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-              td = tr[i].getElementsByTagName("td");
-              for (j = 0; j < td.length; j++) {
-                  if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                      found = true;
-                  }
-              }
-              if (found) {
-                  tr[i].style.display = "";
-                  found = false;
-              } else {
-                  tr[i].style.display = "none";
-              }
-            }
-          }
       </script>
 
       <!-- Google Analytics  -->

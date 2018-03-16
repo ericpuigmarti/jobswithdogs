@@ -21,7 +21,8 @@ body:before {
     left: calc(50% - 30px);
     width: 100%;
     height: 100%;
-    background-image: url(https://cdn.dribbble.com/users/2092964/screenshots/4132887/attachments/945443/dribbble_first_shot.jpg);
+    /*background-image: url(https://cdn.dribbble.com/users/2092964/screenshots/4132887/attachments/945443/dribbble_first_shot.jpg);*/
+    background-image: url(../img/wave.jpg);
     background-size: auto 640px;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -206,7 +207,7 @@ a.post-button-link:visited {
   min-width: 120px;
 }
 #jobs{
-  cursor: pointer;
+  /*cursor: pointer;*/
   transition: transform 160ms;
 }
 #jobs:hover {
@@ -289,6 +290,9 @@ footer {
       padding: 0.25em;
       max-width: 100%;
     }
+    footer {
+      padding: 2em !important;
+    }
 }
 @media only screen and (max-width: 425px) {
     #site-desc {
@@ -319,5 +323,11 @@ footer {
       /*margin: 1em;*/
       left: 20%;
       position: relative;
+    }
+    footer {
+      font-size: 12px;
+    }
+    .form-input {
+      font-size: .7rem !important;
     }
 }
