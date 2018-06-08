@@ -132,7 +132,7 @@
 
 <!-- <input type="text" id="country" placeholder="Country" value="" onkeydown="myFunc()"> -->
 <div class="content-container col-8 col-md-10 col-sm-10 filter">
-  <input class="col-5 col-md-12 col-sm-12 form-input search"  style="display: inline;" type="text" id="search" placeholder="Search by industry or keyword" value="" data-test="jobs-search-input">
+  <input class="col-5 col-md-12 col-sm-12 form-input search"  style="display: inline;" type="text" id="search-box" placeholder="Search by industry or keyword" value="" data-test="jobs-search-input">
   <!-- Dropdown -->
   <select class="col-3 col-md-12 col-sm-12 form-select" style="vertical-align: baseline !important;" name="locations" sheetsu="https://sheetsu.com/apis/v1.0/e3589d470ecc/sheets/cities" sheetsu-limit="20" sheetsu-ignore-case="true">
     <!-- <option value="all">Locations</option> -->
@@ -169,7 +169,7 @@
             <a class="companyname" href={{jobs_url}} target="_blank">{{company_name}}</a>
             <br>
             <p class="companydesc">{{mission}}</p>
-            <p class="location"><i class="icon icon-menu"></i>Office in {{city}}, {{country}} <!-- {{country_emoji}} --></p>
+            <p class="location"><i class="icon icon-menu"></i>Office in {{city}}, <!-- {{country}} --> {{country_emoji}}</p>
             <p class="">
               <span class="chip industry-tag">{{industry}}</span>
               <span class="chip industry-tag">{{industry_2}}</span><!-- {{country_emoji}} -->
@@ -252,8 +252,27 @@
       </script>
 
       <!-- Filter Search Results -->
-      <script type="text/javascript">
-      </script>
+      <!-- <script type="text/javascript">
+        var showResults;
+
+        $('#search-box').keyup(function() {
+          var searchText;
+          searchText = $('#search-box').val();
+          return showResults(searchText);
+        });
+
+        showResults = function(searchText) {
+          $('tbody tr').hide();
+          return $('tbody tr:Contains(' + searchText + ')').show();
+        };
+
+        jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function(arg) {
+          return function(elem) {
+            return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+          };
+        });
+      </script> -->
+      <!-- <script src="js/main.js"></script> -->
 
       <!-- Google Analytics  -->
       <!-- Global site tag (gtag.js) - Google Analytics -->
