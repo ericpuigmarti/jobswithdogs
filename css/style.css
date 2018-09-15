@@ -9,7 +9,6 @@ body {
   text-rendering: optimizeLegibility;
 /*   background-color:#F9F9F9; */
 /*   background-color:#ECB3BF; */
-  /*background: url(https://cdn.dribbble.com/users/103909/screenshots/3459036/rboy-3d-preview-01.png) #ECB3BF no-repeat top !important;*/
   /*background: url(https://cdn.dribbble.com/users/200733/screenshots/4260784/d_dream.png) #F2EBED no-repeat top right !important;*/
   /*background-position: right !important;*/
 }
@@ -18,11 +17,11 @@ body:before {
     /*position: absolute;*/
     position: fixed;
     bottom: 0;
-    left: calc(50% - 30px);
+    /*left: calc(50% - 30px);*/
     width: 100%;
     height: 100%;
     /*background-image: url(https://cdn.dribbble.com/users/2092964/screenshots/4132887/attachments/945443/dribbble_first_shot.jpg);*/
-    /*background-image: url(../img/wave.jpg);*/
+    background-image: url(../img/background.svg);
     background-size: auto 640px;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -60,8 +59,10 @@ padding:20px;
 }
 #companylogo {
   max-width: 80%;
-  /*max-width: 8em;*/
-  padding: 10px 20px;
+  padding: 2em;
+  margin: 0 auto;
+  width: 100%;
+/*max-width: 8em;*/
 }
 #logotd {
   /*border: 1px solid #eee;*/
@@ -102,6 +103,8 @@ td {
     padding-top: 8em;
     padding-bottom: 8em;
     margin: 0 auto;
+    position: relative;
+    float: left;
 }
 .hero {
 /*  background: url(https://cdn.dribbble.com/users/930118/screenshots/3522575/attachments/780957/illustration_shot_12.png);
@@ -124,7 +127,8 @@ td {
 .hero-container {
     margin:0 auto;
     position: fixed;
-    left: 60%;
+    left: 45%;
+    top: 15%;
     z-index: -1000;
 }
 button {
@@ -141,6 +145,7 @@ button {
 }
 .filter {
 margin-bottom: 1em !important;
+margin-top: 100px !important;
 }
 .site-title a {
   color: #222;
