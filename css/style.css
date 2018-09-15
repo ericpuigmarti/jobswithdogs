@@ -1,5 +1,4 @@
 body {
-  /*font-family: "futura-pt, arial, sans-serif;;*/
   font-size: 13px;
   line-height: 20px;
   font-family: "soleil",sans-serif !important;
@@ -7,25 +6,21 @@ body {
   font-feature-settings: "liga","dlig";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-/*   background-color:#F9F9F9; */
-/*   background-color:#ECB3BF; */
-  /*background: url(https://cdn.dribbble.com/users/200733/screenshots/4260784/d_dream.png) #F2EBED no-repeat top right !important;*/
-  /*background-position: right !important;*/
 }
 body:before {
     content: ' ';
-    /*position: absolute;*/
     position: fixed;
     bottom: 0;
     /*left: calc(50% - 30px);*/
+    /*position: absolute;*/
     width: 100%;
     height: 100%;
-    /*background-image: url(https://cdn.dribbble.com/users/2092964/screenshots/4132887/attachments/945443/dribbble_first_shot.jpg);*/
     background-image: url(../img/background.svg);
     background-size: auto 640px;
     background-repeat: no-repeat;
     background-position: left bottom;
     z-index: -1;
+    line-height: 1.3 !important;
 }
 th {
 /*   display:none; */
@@ -68,7 +63,6 @@ padding:20px;
   padding: 2em;
   margin: 0 auto;
   width: 100%;
-/*max-width: 8em;*/
 }
 #logotd {
   /*border: 1px solid #eee;*/
@@ -76,7 +70,6 @@ padding:20px;
 .companyname {
   color:#000000;
   text-decoration:none;
-/*   font-weight:600; */
 }
 .companydesc {
   color:#999;
@@ -91,15 +84,11 @@ padding:20px;
 .chip {
   margin-right: 1em;
 }
-tbody :hover {
-  /*background-color: #f9f9f9;*/
-}
 td {
   display:inline-block;
 }
 .table td, .table th {
   border-bottom: none !important; 
-  /*padding: 0 !important;*/
 }
 
 .table tr {
@@ -133,11 +122,9 @@ td {
     z-index: -999;
 }
 button {
-/*   width: 100%; */
   margin: 0 auto;
   cursor: pointer;
   font-size: 14px;
-/*   margin-right: 15px; */
   padding: 10px 0;
 }
 .primary {
@@ -187,7 +174,6 @@ margin-bottom: 1em !important;
 }
 .header .post-button {
     cursor: pointer;
-    /*display: none;*/
     font-size: 14px;
     margin-right: 15px;
     padding: 10px 0;
@@ -203,15 +189,13 @@ a.post-button-link:visited {
   margin: auto;
   padding: 1rem;
   background: #ffffff;
-  /*border: #eee solid 1px;*/
-  box-shadow: 0 30px 40px 0 rgba(0,0,0,0.08);
+  box-shadow: 1px 1px 60px -20px #aaa
   z-index: 100;
 }
 .view-details {
   min-width: 120px;
 }
 #jobs{
-  /*cursor: pointer;*/
   transition: transform 160ms;
 }
 #jobs:hover {
@@ -252,7 +236,6 @@ a.post-button-link:visited {
   color: red;
 }
 #view-details {
-/*   color:red; */
 }
 #toggle {
   margin-right: 4em;
@@ -268,14 +251,9 @@ footer {
     #link {
       display: none;
     }
-/*    #companylogo{
-      padding: 0 !important;
-      max-width: 100%;
-    }*/
 }
 @media only screen and (max-width: 768px) {
     body {
-        /*background-color: lightblue !important;*/
     }
     body:before {
       left: calc(40% - 30px);
