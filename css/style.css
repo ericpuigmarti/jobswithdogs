@@ -31,6 +31,12 @@ th {
 /*   display:none; */
   text-align:left;
 }
+select, input {
+  border-radius: 3px;
+}
+.form-select, .form-input {
+  border: .05rem solid rgba(202, 206, 215, 0.5) !important;
+}
 .center {
   text-align: center !important;
 }
@@ -101,23 +107,18 @@ td {
 }
 #intro {
     padding-top: 8em;
-    padding-bottom: 8em;
+    padding-bottom: 4em;
     margin: 0 auto;
     position: relative;
     float: left;
 }
-.hero {
-/*  background: url(https://cdn.dribbble.com/users/930118/screenshots/3522575/attachments/780957/illustration_shot_12.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  background-size: 100vw; */
-}
 #site-desc {
   font-size: 2.6rem;
-  font-weight: 400;
   line-height: 3.2rem;
-  font-family: "soleil",sans-serif;
+  font-family: "ff-meta-serif-web-pro", serif;
+  font-weight: 700;
+  /*font-family: "soleil",sans-serif;*/
+  /*font-weight: 400;*/
   color: #5259D2;
 }
 #img-hero {
@@ -128,7 +129,7 @@ td {
     margin: 0 auto;
     position: fixed;
     left: 45%;
-    top: 15%;
+    top: 16%;
     z-index: -999;
 }
 button {
@@ -145,11 +146,9 @@ button {
 }
 .filter {
 margin-bottom: 1em !important;
-margin-top: 100px !important;
 }
 .site-title a {
   color: #222;
-  /*font-family: "Open Sans", arial, sans-serif;*/
   font-size: 20px;
   text-decoration: none;
   line-height:2.75;
@@ -204,7 +203,7 @@ a.post-button-link:visited {
   margin: auto;
   padding: 1rem;
   background: #ffffff;
-  border: #eee solid 1px;
+  /*border: #eee solid 1px;*/
   box-shadow: 0 30px 40px 0 rgba(0,0,0,0.08);
   z-index: 100;
 }
@@ -307,13 +306,6 @@ footer {
     #link {
       display: none;
     }
-    /*.intro-container {
-      max-height: 60vh;
-    }*/
-/*    #intro {
-      padding-top: 6em;
-      padding-bottom: 3em;
-    }*/
     body:before {
       left: 0;
     }
@@ -325,7 +317,6 @@ footer {
     #logotd img {
       max-width: 50%;
       margin-top: 1em;
-      /*margin: 1em;*/
       left: 20%;
       position: relative;
     }
