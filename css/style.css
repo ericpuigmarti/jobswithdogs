@@ -125,11 +125,11 @@ td {
     max-width: 100%;
 }
 .hero-container {
-    margin:0 auto;
+    margin: 0 auto;
     position: fixed;
     left: 45%;
     top: 15%;
-    z-index: -1000;
+    z-index: -999;
 }
 button {
 /*   width: 100%; */
