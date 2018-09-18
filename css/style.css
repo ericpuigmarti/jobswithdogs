@@ -189,7 +189,7 @@ a.post-button-link:visited {
   margin: auto;
   padding: 1rem;
   background: #ffffff;
-  box-shadow: 1px 1px 60px -20px #aaa
+  box-shadow: 1px 1px 60px -20px #aaa;
   z-index: 100;
 }
 .view-details {
