@@ -90,7 +90,9 @@ td {
 .table td, .table th {
   border-bottom: none !important; 
 }
-
+.btn {
+  border-radius: 3px !important;
+}
 .table tr {
   border-bottom: .05rem solid #e7e9ed;
 }
