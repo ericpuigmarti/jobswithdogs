@@ -101,7 +101,7 @@ td {
     padding-bottom: 4em;
     margin: 0 auto;
     position: relative;
-    float: left;
+    /*float: left;*/
 }
 #site-desc {
   font-size: 2.6rem;
@@ -249,6 +249,12 @@ footer {
   margin: 0 auto;
 }
 
+#intro{
+  -webkit-order: 1;
+}
+#illustration {
+  -webkit-order: 2;
+}
 @media only screen and (max-width: 1024px) {
     #link {
       display: none;
@@ -305,5 +311,11 @@ footer {
     }
     .form-input {
       font-size: .7rem !important;
+    }
+    #intro{
+      -webkit-order: 2;
+    }
+    #illustration {
+      -webkit-order: 1;
     }
 }
